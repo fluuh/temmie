@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(viper)
+project(temmie)
 
 add_compile_options(-Wall -Wmissing-prototypes -Wstrict-prototypes -Wshadow=local)
 
