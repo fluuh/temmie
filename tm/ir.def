@@ -1,0 +1,30 @@
+/* IR opcodes and their types */
+
+/* IRDEF(ENUM, NAME, FORMAT)
+ *
+ * - ENUM
+ *   The name used in the source code (CODE_##ENUM)
+ * - NAME
+ *   The name used for eventual dumping of IR.
+ * - FORMAT
+ *   Parameters and their types. See more in code.c
+ */
+
+IRDEF(NOP, "NOP", "")
+IRDEF(END, "END", "")
+
+/* SECTION - CALLS */
+
+/* CALL(DST, FUNC, N_ARGS) */
+IRDEF(CALL, "CALL", "dfi")
+
+/* CREG(DST, REG, N_ARGS)
+ * call through register */
+IRDEF(CREG, "CREG", "dri")
+
+/* CARG(POS, REG)
+ * this should probably use C as well :| */
+IRDEF(CARG, "CARG", "ir")
+
+IRDEF(RET, "RET", "r")
+IRDEF(RETVOID, "RETVOID", "")
